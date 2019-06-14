@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="插件,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="函数库  Lodash就是这样的一套工具库，它内部封装了诸多对字符串、数组、对象等常见数据类型的处理函数Lodash（推荐）：https://github.com/lodash/lodash中文文档：https://www.css88.com/doc/lodash/动画库   Animate.css  CSS3 动画库，也是目前最通用的动画库。 https://daneden.github.io/">
+<meta name="keywords" content="插件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端常用插件,工具类库">
+<meta property="og:url" content="http://yugeye.gitee.io/blog/2018/12/22/前端常用插件、工具类库汇总/index.html">
+<meta property="og:site_name" content="Yu！">
+<meta property="og:description" content="函数库  Lodash就是这样的一套工具库，它内部封装了诸多对字符串、数组、对象等常见数据类型的处理函数Lodash（推荐）：https://github.com/lodash/lodash中文文档：https://www.css88.com/doc/lodash/动画库   Animate.css  CSS3 动画库，也是目前最通用的动画库。 https://daneden.github.io/">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-12-19T14:43:14.619Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端常用插件,工具类库">
+<meta name="twitter:description" content="函数库  Lodash就是这样的一套工具库，它内部封装了诸多对字符串、数组、对象等常见数据类型的处理函数Lodash（推荐）：https://github.com/lodash/lodash中文文档：https://www.css88.com/doc/lodash/动画库   Animate.css  CSS3 动画库，也是目前最通用的动画库。 https://daneden.github.io/">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"slideLeftIn","post_header":"perspectiveRightIn","post_body":"slideDownIn","coll_header":"expandIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yugeye.gitee.io/blog/2018/12/22/前端常用插件、工具类库汇总/">
+
+
+
+
+
+  <title>前端常用插件,工具类库 | Yu！</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yu！</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yugeye.gitee.io/blog/blog/2018/12/22/前端常用插件、工具类库汇总/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YuGeYe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yu！">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">前端常用插件,工具类库</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-22T00:02:39+08:00">
+                2018-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/插件/" itemprop="url" rel="index">
+                    <span itemprop="name">插件</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="函数库"><a href="#函数库" class="headerlink" title="函数库"></a>函数库</h2><hr>
+<ul>
+<li>Lodash就是这样的一套工具库，它内部封装了诸多对字符串、数组、对象等常见数据类型的处理函数<br>Lodash（推荐）：<a href="https://github.com/lodash/lodash" target="_blank" rel="noopener">https://github.com/lodash/lodash</a><br>中文文档：<a href="https://www.css88.com/doc/lodash/" target="_blank" rel="noopener">https://www.css88.com/doc/lodash/</a><h2 id="动画库"><a href="#动画库" class="headerlink" title="动画库"></a>动画库</h2></li>
+</ul>
+<hr>
+<p><strong>Animate.css</strong></p>
+<ul>
+<li>CSS3 动画库，也是目前最通用的动画库。</li>
+<li><a href="https://daneden.github.io/animate.css/" target="_blank" rel="noopener">https://daneden.github.io/animate.css/</a> </li>
+</ul>
+<hr>
+<p> <strong>Anime.js</strong></p>
+<ul>
+<li>一个强大的、轻量级的用来制作动画的javascript库</li>
+<li><a href="http://animejs.com/" target="_blank" rel="noopener">http://animejs.com/</a></li>
+</ul>
+<hr>
+<p> <strong>Hover.css</strong></p>
+<ul>
+<li>CSS hover 悬停效果，可以应用于链接、按钮、图片等等。</li>
+<li>在线演示：<a href="http://ianlunn.github.io/Hover/" target="_blank" rel="noopener">http://ianlunn.github.io/Hover/</a> </li>
+<li>立即下载：<a href="https://github.com/IanLunn/Hover/archive/master.zip" target="_blank" rel="noopener">https://github.com/IanLunn/Hover/archive/master.zip</a> </li>
+<li>GitHub地址：<a href="https://github.com/IanLunn/Hover" target="_blank" rel="noopener">https://github.com/IanLunn/Hover</a></li>
+</ul>
+<hr>
+<p><strong>wow.js</strong></p>
+<ul>
+<li>滚动展示动画</li>
+<li>WOW.js 依赖 animate.css，所以它支持 animate.css 多达 60 多种的动画效果。</li>
+<li>GitHub地址：<a href="https://github.com/matthieua/WOW" target="_blank" rel="noopener">https://github.com/matthieua/WOW</a></li>
+<li>在线演示：<a href="http://mynameismatthieu.com/WOW/" target="_blank" rel="noopener">http://mynameismatthieu.com/WOW/</a></li>
+</ul>
+<hr>
+<p><strong>scrollReveal.js</strong></p>
+<ul>
+<li>类似 wow.js</li>
+<li><a href="https://scrollrevealjs.org/" target="_blank" rel="noopener">https://scrollrevealjs.org/</a></li>
+</ul>
+<hr>
+<p><strong>Magic.css</strong></p>
+<ul>
+<li>css3 animation动画库</li>
+<li>GitHub地址：<a href="https://github.com/miniMAC/magic" target="_blank" rel="noopener">https://github.com/miniMAC/magic</a></li>
+<li>在线演示：<a href="https://www.minimamente.com/example/magic_animations/" target="_blank" rel="noopener">https://www.minimamente.com/example/magic_animations/</a></li>
+</ul>
+<hr>
+<p> <strong>move.js</strong></p>
+<ul>
+<li>一个小型的JavaScript库，通过JS来控制一系列的CSS动画顺序执行，使CSS3动画变得非常简单和优雅。</li>
+<li>在线演示：<a href="https://visionmedia.github.io/move.js/" target="_blank" rel="noopener">https://visionmedia.github.io/move.js/</a></li>
+<li>GitHub地址：<a href="https://github.com/visionmedia/move.js" target="_blank" rel="noopener">https://github.com/visionmedia/move.js</a></li>
+</ul>
+<hr>
+<p> <strong>Velocity.js</strong></p>
+<ul>
+<li>一个功能齐全的 JavaScript 动画套件，包括诸如淡入淡出、滚动、滚动、停止、结束、翻转等动画效果。</li>
+<li>中文文档：<a href="http://www.mrfront.com/docs/velocity.js/index.html" target="_blank" rel="noopener">http://www.mrfront.com/docs/velocity.js/index.html</a></li>
+<li>GitHub地址：<a href="https://github.com/julianshapiro/velocity" target="_blank" rel="noopener">https://github.com/julianshapiro/velocity</a></li>
+</ul>
+<hr>
+<h2 id="滚动库"><a href="#滚动库" class="headerlink" title="滚动库"></a>滚动库</h2><hr>
+<p><strong>iscroll</strong> </p>
+<ul>
+<li>平滑滚动插件</li>
+<li>中文文档：<a href="https://iiunknown.gitbooks.io/iscroll-5-api-cn/content/index.html" target="_blank" rel="noopener">https://iiunknown.gitbooks.io/iscroll-5-api-cn/content/index.html</a></li>
+<li>GitHub地址：<a href="https://github.com/cubiq/iscroll" target="_blank" rel="noopener">https://github.com/cubiq/iscroll</a></li>
+</ul>
+<hr>
+<p> <strong>BetterScroll</strong></p>
+<ul>
+<li>iscroll 的优化版，使移动端滑动体验更加流畅</li>
+<li>GitHub地址：<a href="https://github.com/ustbhuangyi/better-scroll" target="_blank" rel="noopener">https://github.com/ustbhuangyi/better-scroll</a></li>
+<li>中文文档：<a href="https://ustbhuangyi.github.io/better-scroll/doc/zh-hans/#better-scroll%20%E6%98%AF%E4%BB%80%E4%B9%88" target="_blank" rel="noopener">https://ustbhuangyi.github.io/better-scroll/doc/zh-hans/#better-scroll%20%E6%98%AF%E4%BB%80%E4%B9%88</a></li>
+</ul>
+<hr>
+<p> <strong>mescroll</strong></p>
+<ul>
+<li>移动端上拉刷新下拉加载</li>
+<li>中文文档：<a href="http://www.mescroll.com/" target="_blank" rel="noopener">http://www.mescroll.com/</a></li>
+</ul>
+<hr>
+<p> <strong>animatescroll</strong></p>
+<ul>
+<li>jQuery滚动到指定位置</li>
+<li><a href="https://plugins.compzets.com/animatescroll/" target="_blank" rel="noopener">https://plugins.compzets.com/animatescroll/</a></li>
+</ul>
+<hr>
+<p> <strong>crossfade.js</strong></p>
+<ul>
+<li>jQuery图片模糊插件</li>
+<li>中文文档：<a href="http://www.dowebok.com/104.html" target="_blank" rel="noopener">http://www.dowebok.com/104.html</a></li>
+</ul>
+<hr>
+<p><strong>jQuery Scrollbox</strong></p>
+<ul>
+<li>图片文字滚动插件</li>
+<li>在线演示：<a href="http://www.jq22.com/jquery-info1890" target="_blank" rel="noopener">http://www.jq22.com/jquery-info1890</a></li>
+</ul>
+<hr>
+<p><strong>liMarquee</strong></p>
+<ul>
+<li>jQuery无缝滚动插件</li>
+<li>GitHub地址：<a href="https://github.com/omcg33/jquery.limarquee" target="_blank" rel="noopener">https://github.com/omcg33/jquery.limarquee</a></li>
+<li>在线演示：<a href="http://www.dowebok.com/188.html" target="_blank" rel="noopener">http://www.dowebok.com/188.html</a></li>
+</ul>
+<h2 id="轮播图"><a href="#轮播图" class="headerlink" title="轮播图"></a>轮播图</h2><hr>
+<p><strong>Swiper</strong></p>
+<ul>
+<li>Swiper常用于移动端网站的内容触摸滑动</li>
+<li>中文文档：<a href="https://www.swiper.com.cn/" target="_blank" rel="noopener">https://www.swiper.com.cn/</a></li>
+</ul>
+<hr>
+<p><strong>iSlider</strong></p>
+<ul>
+<li>移动端滑动组件</li>
+<li>中文文档：<a href="http://eux.baidu.com/iSlider/demo/index_chinese.html" target="_blank" rel="noopener">http://eux.baidu.com/iSlider/demo/index_chinese.html</a></li>
+</ul>
+<hr>
+<p><strong>slip.js</strong></p>
+<ul>
+<li>移动端跟随手指滑动组件，零依赖。</li>
+<li>中文文档：<a href="https://binnng.github.io/slip.js/" target="_blank" rel="noopener">https://binnng.github.io/slip.js/</a></li>
+<li>GitHub地址：<a href="https://github.com/binnng/slip.js" target="_blank" rel="noopener">https://github.com/binnng/slip.js</a></li>
+</ul>
+<h2 id="滚屏"><a href="#滚屏" class="headerlink" title="滚屏"></a>滚屏</h2><hr>
+<p><strong>fullPage.js</strong></p>
+<ul>
+<li>全屏插件</li>
+<li><a href="http://fullpage.81hu.com/" target="_blank" rel="noopener">http://fullpage.81hu.com/</a></li>
+</ul>
+<hr>
+<h2 id="弹出框"><a href="#弹出框" class="headerlink" title="弹出框"></a>弹出框</h2><hr>
+<p><strong>layer</strong></p>
+<ul>
+<li>中文文档：<a href="http://layer.layui.com/" target="_blank" rel="noopener">http://layer.layui.com/</a></li>
+</ul>
+<hr>
+<h2 id="级联选择器"><a href="#级联选择器" class="headerlink" title="级联选择器"></a>级联选择器</h2><hr>
+<p><strong>jQueryDistpicker</strong></p>
+<ul>
+<li>中国省市区地址三级联动jQuery插件</li>
+<li><a href="http://www.jq22.com/demo/jQueryDistpicker20160621/" target="_blank" rel="noopener">http://www.jq22.com/demo/jQueryDistpicker20160621/</a></li>
+</ul>
+<hr>
+<h2 id="时间选择器"><a href="#时间选择器" class="headerlink" title="时间选择器"></a>时间选择器</h2><hr>
+<ul>
+<li><a href="https://www.layui.com/laydate/" target="_blank" rel="noopener">https://www.layui.com/laydate/</a></li>
+</ul>
+<hr>
+<h2 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h2><hr>
+<ul>
+<li>百度地图：lbsyun.baidu.com/</li>
+<li>高德地图：lbs.amap.com/</li>
+<li>腾讯地图：lbs.qq.com/</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/插件/" <i="" class="fa fa-tag"> 插件</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2018/12/22/git+node常用指令/" rel="next" title="Git + node 常用指令">
+                <i class="fa fa-chevron-left"></i> Git + node 常用指令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2018/12/22/同步Vs code配置和插件/" rel="prev" title="同步Vs code配置与插件">
+                同步Vs code配置与插件 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/blog/uploads/avatar.jpg" alt="YuGeYe">
+            
+              <p class="site-author-name" itemprop="name">YuGeYe</p>
+              <p class="site-description motion-element" itemprop="description">兄dei.你来了!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://juejin.im/timeline" target="_blank" title="掘金">
+                      
+                        <i class="fa fa-fw fa-globe"></i>掘金</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://gitee.com/" target="_blank" title="码云">
+                      
+                        <i class="fa fa-fw fa-globe"></i>码云</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/nav/watchers" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://uksir.gitee.io/docs/" title="wanshao" target="_blank">wanshao</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://wangdoc.com/javascript/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/" title="廖雪峰" target="_blank">廖雪峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#函数库"><span class="nav-number">1.</span> <span class="nav-text">函数库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动画库"><span class="nav-number">2.</span> <span class="nav-text">动画库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#滚动库"><span class="nav-number">3.</span> <span class="nav-text">滚动库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#轮播图"><span class="nav-number">4.</span> <span class="nav-text">轮播图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#滚屏"><span class="nav-number">5.</span> <span class="nav-text">滚屏</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#弹出框"><span class="nav-number">6.</span> <span class="nav-text">弹出框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#级联选择器"><span class="nav-number">7.</span> <span class="nav-text">级联选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间选择器"><span class="nav-number">8.</span> <span class="nav-text">时间选择器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地图"><span class="nav-number">9.</span> <span class="nav-text">地图</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YuGeYe</span>
+
+  
+</div>
+
+
+  <!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

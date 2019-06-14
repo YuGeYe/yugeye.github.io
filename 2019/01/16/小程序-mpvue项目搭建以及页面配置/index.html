@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="wx-小程序,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="小程序-11.框架分析 wepy 是由个人开发的，维护和更新不安全 mpvue  好处是美团发起的，并且vue作者贡献代码，但是mpvue开发的小程序需要多一层编译, (对于我们当前学习好处是可以重新做一套vuejs相关的项目) 原生小程序（注意原生小程序的更新，能用原生来开发尽量用原生）  ##2.搭建mpvue项目 1.统一切换到桌面 例子 : C:\Users\Administrator\D">
+<meta name="keywords" content="wx-小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小程序-mpvue项目搭建以及页面配置">
+<meta property="og:url" content="http://yugeye.gitee.io/blog/2019/01/16/小程序-mpvue项目搭建以及页面配置/index.html">
+<meta property="og:site_name" content="Yu！">
+<meta property="og:description" content="小程序-11.框架分析 wepy 是由个人开发的，维护和更新不安全 mpvue  好处是美团发起的，并且vue作者贡献代码，但是mpvue开发的小程序需要多一层编译, (对于我们当前学习好处是可以重新做一套vuejs相关的项目) 原生小程序（注意原生小程序的更新，能用原生来开发尽量用原生）  ##2.搭建mpvue项目 1.统一切换到桌面 例子 : C:\Users\Administrator\D">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="c:/Users/Administrator/Desktop/课程-广州传智24期小程序阶段-mpvue/day-02/md_images/1546830220189.png">
+<meta property="og:image" content="c:/Users/Administrator/Desktop/课程-广州传智24期小程序阶段-mpvue/day-02/md_images/1546842896769.png">
+<meta property="og:image" content="c:/Users/ADMINI~1/AppData/Local/Temp/1546845853393.png">
+<meta property="og:image" content="c:/Users/ADMINI~1/AppData/Local/Temp/1546845986217.png">
+<meta property="og:image" content="c:/Users/Administrator/Desktop/课程-广州传智24期小程序阶段-mpvue/day-02/md_images/1546852822701.png">
+<meta property="og:updated_time" content="2019-01-16T04:28:53.675Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小程序-mpvue项目搭建以及页面配置">
+<meta name="twitter:description" content="小程序-11.框架分析 wepy 是由个人开发的，维护和更新不安全 mpvue  好处是美团发起的，并且vue作者贡献代码，但是mpvue开发的小程序需要多一层编译, (对于我们当前学习好处是可以重新做一套vuejs相关的项目) 原生小程序（注意原生小程序的更新，能用原生来开发尽量用原生）  ##2.搭建mpvue项目 1.统一切换到桌面 例子 : C:\Users\Administrator\D">
+<meta name="twitter:image" content="c:/Users/Administrator/Desktop/课程-广州传智24期小程序阶段-mpvue/day-02/md_images/1546830220189.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"slideLeftIn","post_header":"perspectiveRightIn","post_body":"slideDownIn","coll_header":"expandIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yugeye.gitee.io/blog/2019/01/16/小程序-mpvue项目搭建以及页面配置/">
+
+
+
+
+
+  <title>小程序-mpvue项目搭建以及页面配置 | Yu！</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yu！</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yugeye.gitee.io/blog/blog/2019/01/16/小程序-mpvue项目搭建以及页面配置/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YuGeYe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yu！">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">小程序-mpvue项目搭建以及页面配置</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-16T12:33:25+08:00">
+                2019-01-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/小程序/" itemprop="url" rel="index">
+                    <span itemprop="name">小程序</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="小程序-1"><a href="#小程序-1" class="headerlink" title="小程序-1"></a>小程序-1</h1><h2 id="1-框架分析"><a href="#1-框架分析" class="headerlink" title="1.框架分析"></a>1.框架分析</h2><ul>
+<li>wepy 是由个人开发的，维护和更新不安全</li>
+<li>mpvue  好处是美团发起的，并且vue作者贡献代码，但是mpvue开发的小程序需要多一层编译, (对于我们当前学习好处是可以重新做一套vuejs相关的项目)</li>
+<li>原生小程序（注意原生小程序的更新，能用原生来开发尽量用原生）</li>
+</ul>
+<p>##2.搭建mpvue项目</p>
+<p>1.统一切换到桌面 例子 : C:\Users\Administrator\Desktop&gt;</p>
+<p>2.下载模板 <code>vue init mpvue/mpvue-quickstart shop</code></p>
+<p>3.切换到项目目录 <code>cd shop</code></p>
+<p>4.安装依赖包 <code>npm install</code></p>
+<p>5.启动项目 npm run dev</p>
+<p>##3.mpvue项目的结构</p>
+<p>1.页面结构是index.vue和main.js组成, main.js是固定写死的，每个页面都存在一个main.js</p>
+<p>2.页面的配置是由main.json来配置，但是这个文件不是必须的</p>
+<p>3.新建项目需要手动创建，并且在app.json中手动添加pages配置</p>
+<p>##4.配置项目的tabbar</p>
+<p>把images图片文件夹放到项目shop/static</p>
+<p><img src="C:\Users\Administrator\Desktop\课程-广州传智24期小程序阶段-mpvue\day-02\md_images\1546830220189.png" alt="1546830220189"></p>
+<p>在app.json新增tabBar配置</p>
+<h2 id="5-首页实现"><a href="#5-首页实现" class="headerlink" title="5.首页实现"></a>5.首页实现</h2><p>1.修改全局的配置</p>
+<p>2.使用轮播图组件</p>
+<p>3.楼层的布局</p>
+<p>###1.修改全局的配置</p>
+<p><img src="C:\Users\Administrator\Desktop\课程-广州传智24期小程序阶段-mpvue\day-02\md_images\1546842896769.png" alt="1546842896769"></p>
+<p>###2.使用轮播图组件</p>
+<p><img src="C:\Users\ADMINI~1\AppData\Local\Temp\1546845853393.png" alt="1546845853393"></p>
+<h2 id="6-配置request合法域名"><a href="#6-配置request合法域名" class="headerlink" title="6.配置request合法域名"></a>6.配置request合法域名</h2><p>在微信公众平台后台-&gt; 开发 -&gt; 开发设置 添加合法域名 (注意一个月只能修改5次)</p>
+<p>配置完成后重启开发工具，在详情-&gt;域名信息可以看到域名就表示配置成功</p>
+<p><img src="C:\Users\ADMINI~1\AppData\Local\Temp\1546845986217.png" alt="1546845986217"></p>
+<h2 id="7-封装request请求，返回promise对象"><a href="#7-封装request请求，返回promise对象" class="headerlink" title="7.封装request请求，返回promise对象"></a>7.封装request请求，返回promise对象</h2><p>从结果出发，先把你想要的效果先展示出来</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">request(参数1， 参数2， 参数3).then(res =&gt; &#123;</span><br><span class="line">    // somthing</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>根据上面的代码进行封装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function request(url, method = &quot;GET&quot;,  data = &#123;&#125;)&#123;</span><br><span class="line">    return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">        wx.request(&#123;</span><br><span class="line">            url,</span><br><span class="line">            method,</span><br><span class="line">            data,</span><br><span class="line">            success: res =&gt; &#123;</span><br><span class="line">                resolve(res);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>需要使用async await解决多层嵌套，使用同步的方法解决多个异步请求</p>
+<h2 id="8-async-await的使用"><a href="#8-async-await的使用" class="headerlink" title="8.async await的使用"></a>8.async await的使用</h2><p>在函数前面声明async变量，使该函数变成异步函数，在异步函数里面使用await关键字等待promise请求的返回，await返回的结果是resolve的参数(res)</p>
+<p>await在等待执行时候下面代码不会执行</p>
+<p><img src="C:\Users\Administrator\Desktop\课程-广州传智24期小程序阶段-mpvue\day-02\md_images\1546852822701.png" alt="1546852822701"></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/wx-小程序/" <i="" class="fa fa-tag"> wx-小程序</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2019/01/16/小程序-自定义组件/" rel="next" title="小程序-自定义组件">
+                <i class="fa fa-chevron-left"></i> 小程序-自定义组件
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/01/16/小程序-promise封装/" rel="prev" title="小程序-promise封装">
+                小程序-promise封装 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/blog/uploads/avatar.jpg" alt="YuGeYe">
+            
+              <p class="site-author-name" itemprop="name">YuGeYe</p>
+              <p class="site-description motion-element" itemprop="description">兄dei.你来了!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://juejin.im/timeline" target="_blank" title="掘金">
+                      
+                        <i class="fa fa-fw fa-globe"></i>掘金</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://gitee.com/" target="_blank" title="码云">
+                      
+                        <i class="fa fa-fw fa-globe"></i>码云</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/nav/watchers" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://uksir.gitee.io/docs/" title="wanshao" target="_blank">wanshao</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://wangdoc.com/javascript/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/" title="廖雪峰" target="_blank">廖雪峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#小程序-1"><span class="nav-number">1.</span> <span class="nav-text">小程序-1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-框架分析"><span class="nav-number">1.1.</span> <span class="nav-text">1.框架分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-首页实现"><span class="nav-number">1.2.</span> <span class="nav-text">5.首页实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-配置request合法域名"><span class="nav-number">1.3.</span> <span class="nav-text">6.配置request合法域名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-封装request请求，返回promise对象"><span class="nav-number">1.4.</span> <span class="nav-text">7.封装request请求，返回promise对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-async-await的使用"><span class="nav-number">1.5.</span> <span class="nav-text">8.async await的使用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YuGeYe</span>
+
+  
+</div>
+
+
+  <!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

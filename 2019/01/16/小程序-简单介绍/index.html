@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/blog/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/blog/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/blog/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/blog/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/blog/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/blog/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="wx-小程序,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="微信小程序开发-基础今天知识点1.什么是小程序2.小程序和web网页的区别3.小程序环境搭建4.创建小程序5.开发工具功能介绍6.小程序的文件结构7.小程序的组件8.小程序样式9.小程序生命周期 1.什么是小程序小程序是一种不需要下载、安装即可使用的应用，它实现了触手可及的梦想，用户扫一扫或者搜一下就能打开应用，也实现了用完即走的理念，用户不用安装太多应用，应用随处可用，但又无须安装卸载 2.小程">
+<meta name="keywords" content="wx-小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="1.小程序-简单介绍">
+<meta property="og:url" content="http://yugeye.gitee.io/blog/2019/01/16/小程序-简单介绍/index.html">
+<meta property="og:site_name" content="Yu！">
+<meta property="og:description" content="微信小程序开发-基础今天知识点1.什么是小程序2.小程序和web网页的区别3.小程序环境搭建4.创建小程序5.开发工具功能介绍6.小程序的文件结构7.小程序的组件8.小程序样式9.小程序生命周期 1.什么是小程序小程序是一种不需要下载、安装即可使用的应用，它实现了触手可及的梦想，用户扫一扫或者搜一下就能打开应用，也实现了用完即走的理念，用户不用安装太多应用，应用随处可用，但又无须安装卸载 2.小程">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yugeye.gitee.io/blog/2019/01/16/小程序-简单介绍/images/QQ图片20180911090628.png">
+<meta property="og:image" content="http://yugeye.gitee.io/blog/2019/01/16/小程序-简单介绍/images/QQ图片20180910110644.png">
+<meta property="og:image" content="http://yugeye.gitee.io/blog/2019/01/16/小程序-简单介绍/images/QQ图片20180910112151.png">
+<meta property="og:image" content="http://yugeye.gitee.io/blog/2019/01/16/小程序-简单介绍/images/QQ图片20180910113810.png">
+<meta property="og:image" content="http://yugeye.gitee.io/blog/2019/01/16/小程序-简单介绍/images/QQ图片20180910114910.png">
+<meta property="og:updated_time" content="2019-01-16T03:30:21.698Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="1.小程序-简单介绍">
+<meta name="twitter:description" content="微信小程序开发-基础今天知识点1.什么是小程序2.小程序和web网页的区别3.小程序环境搭建4.创建小程序5.开发工具功能介绍6.小程序的文件结构7.小程序的组件8.小程序样式9.小程序生命周期 1.什么是小程序小程序是一种不需要下载、安装即可使用的应用，它实现了触手可及的梦想，用户扫一扫或者搜一下就能打开应用，也实现了用完即走的理念，用户不用安装太多应用，应用随处可用，但又无须安装卸载 2.小程">
+<meta name="twitter:image" content="http://yugeye.gitee.io/blog/2019/01/16/小程序-简单介绍/images/QQ图片20180911090628.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/blog/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"slideLeftIn","post_header":"perspectiveRightIn","post_body":"slideDownIn","coll_header":"expandIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yugeye.gitee.io/blog/2019/01/16/小程序-简单介绍/">
+
+
+
+
+
+  <title>1.小程序-简单介绍 | Yu！</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/blog/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Yu！</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/blog/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/blog/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/blog/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/blog/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yugeye.gitee.io/blog/blog/2019/01/16/小程序-简单介绍/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="YuGeYe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/blog/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yu！">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">1.小程序-简单介绍</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-16T12:37:33+08:00">
+                2019-01-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/blog/categories/小程序/" itemprop="url" rel="index">
+                    <span itemprop="name">小程序</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="微信小程序开发-基础"><a href="#微信小程序开发-基础" class="headerlink" title="微信小程序开发-基础"></a>微信小程序开发-基础</h1><h2 id="今天知识点"><a href="#今天知识点" class="headerlink" title="今天知识点"></a>今天知识点</h2><p>1.什么是小程序<br>2.小程序和web网页的区别<br>3.小程序环境搭建<br>4.创建小程序<br>5.开发工具功能介绍<br>6.小程序的文件结构<br>7.小程序的组件<br>8.小程序样式<br>9.小程序生命周期</p>
+<h2 id="1-什么是小程序"><a href="#1-什么是小程序" class="headerlink" title="1.什么是小程序"></a>1.什么是小程序</h2><p>小程序是一种不需要下载、安装即可使用的应用，它实现了触手可及的梦想，用户扫一扫或者搜一下就能打开应用，也实现了用完即走的理念，用户不用安装太多应用，应用随处可用，但又无须安装卸载</p>
+<h2 id="2-小程序和web网页的区别"><a href="#2-小程序和web网页的区别" class="headerlink" title="2.小程序和web网页的区别"></a>2.小程序和web网页的区别</h2><p>小程序和网页是两个完全独立的东西，只是开发模式比较相似，都使用前端的开发技术</p>
+<h2 id="3-小程序环境搭建"><a href="#3-小程序环境搭建" class="headerlink" title="3.小程序环境搭建"></a>3.小程序环境搭建</h2><h3 id="账号注册"><a href="#账号注册" class="headerlink" title="账号注册"></a>账号注册</h3><p>百度搜索 “微信公众平台”<br>官网地址： <a href="https://mp.weixin.qq.com/" target="_blank" rel="noopener">https://mp.weixin.qq.com/</a><br>微信公众平台小程序注册地址：<a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1&amp;token=&amp;lang=zh_CN" target="_blank" rel="noopener">https://mp.weixin.qq.com/wxopen/waregister?action=step1&amp;token=&amp;lang=zh_CN</a></p>
+<p><strong>注册时主体类型选择</strong><br><img src="./images/QQ图片20180911090628.png" alt="QQ图片20180911090628"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：注册小程序使用的邮箱账号不能和订阅号或者服务号的重复，也就是假如该邮箱账号注册过订阅号或者服务号，就不能用来注册小程序账号了，推荐注册一个新的邮箱账号，</span><br></pre></td></tr></table></figure>
+<h2 id="4-创建小程序"><a href="#4-创建小程序" class="headerlink" title="4.创建小程序"></a>4.创建小程序</h2><p><strong>1.下载开发工具</strong><br>开发工具下载地址：<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html</a></p>
+<p><strong>2.获取appid</strong><br>小程序的appid相当于小程序平台的一个身份证，很多地方需要用到appid，比如在创建小程序项目时候就需要用到appid</p>
+<p>1.登录微信公众开发平台（地址见账号注册）<br>2.进入设置<br>3.切换到开发设置<br><img src="./images/QQ图片20180910110644.png" alt=""></p>
+<p><strong>3.创建第一个小程序项目</strong><br>打开微信开发者工具，根据下面提示填写项目信息<br><img src="./images/QQ图片20180910112151.png" alt=""></p>
+<p>点击右下角的确定按钮，创建项目成功</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">总结：</span><br><span class="line">1. 账号注册，推荐使用新注册的邮箱，可以是163邮箱、新浪邮箱、qq邮箱等等</span><br><span class="line">2. 个人开发者，注册时第三选择账号主体要选择个人</span><br><span class="line">3. 获取appid，登录微信公众平台，选择左侧栏的设置，在右侧内容页切换到开发设置</span><br><span class="line">4. 创建项目时需要输入上一步获取的appid</span><br><span class="line">5. 选择启动模板： 选择快速启动模板</span><br></pre></td></tr></table></figure>
+<h2 id="5-开发工具功能介绍"><a href="#5-开发工具功能介绍" class="headerlink" title="5.开发工具功能介绍"></a>5.开发工具功能介绍</h2><p><strong>1.新增和修改编译模式</strong><br>编译模式可以修改启动页和添加该页面的参数，新增界面如下图：</p>
+<p><img src="./images/QQ图片20180910113810.png" alt=""></p>
+<p>点击确定按钮，页面就会刷新并显示为当前设置的启动页</p>
+<p><strong>2.预览和真机调试</strong><br>调试：开发者可以通过手机扫描预览提供的二维码来访问小程序<br>真机调试：和预览一样会提供访问的二维码，不同的是真机调试模式会弹出控制台，可以查看手机模式下的调试信息</p>
+<p><strong>3.清除缓存</strong><br>清除本地的授权记录、sessionStorage和localStorage等缓存数据</p>
+<p><strong>4.项目的详情设置</strong><br>通过顶部的菜单栏，选择 - 设置 - 项目设置，点击后有右侧打开项目设置面板<br><img src="./images/QQ图片20180910114910.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意版本库的选择，不要轻易去修改这个配置，很容易导致项目的api不兼容</span><br></pre></td></tr></table></figure>
+<h2 id="6-小程序文件结构"><a href="#6-小程序文件结构" class="headerlink" title="6.小程序文件结构"></a>6.小程序文件结构</h2><h3 id="1-基本的结构"><a href="#1-基本的结构" class="headerlink" title="1.基本的结构"></a>1.基本的结构</h3><pre><code>- pages // 包含了所有页面
+- index // 页面文件夹
+    - index.js    // 页面的脚本逻辑文件
+    - index.wxml  // 页面模板文件
+    - index.wxss  // 页面样式文件
+    - index.json  // 页面配置文件
+- utils // 普通的工具函数
+- app.js   // 项目启动入口
+- app.json // 全局的配置
+- app.wxss // 全局样式
+- project.config.json // 项目的配置文件
+</code></pre><p>和web的页面结构比较：</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>小程序</th>
+<th>web</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>模板</td>
+<td>.wxml</td>
+<td>.html</td>
+</tr>
+<tr>
+<td>样式</td>
+<td>.wxss</td>
+<td>.css</td>
+</tr>
+<tr>
+<td>脚本</td>
+<td>.js</td>
+<td>.js/script标签</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：微信小程序页面目录下，.js 和  .wxml 文件是必需的</span><br></pre></td></tr></table></figure>
+<h3 id="2-全局配置-app-json"><a href="#2-全局配置-app-json" class="headerlink" title="2.全局配置 app.json"></a>2.全局配置 app.json</h3><p>app.json文件用来对微信小程序进行全局配置</p>
+<p><strong>常见的属性：</strong><br>| 属性 | 类型 | 必填 | 描述 | 详细配置地址 |<br>| —- | —- | —- | —- | —- |<br>| pages | String | 是 | 页面路径列表 | <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/config.html#pages" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/framework/config.html#pages</a> |<br>| window | Object | 否 | 全局的窗口样式 | <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/config.html#window" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/framework/config.html#window</a> |<br>| tabBar | Object | 否 | 底部tab栏的配置 | <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/config.html#tabBar" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/framework/config.html#tabBar</a> |</p>
+<p><strong>局部配置</strong></p>
+<p>pages数组中的页面路径地址必须存在pages文件夹中</p>
+<p>pages数组中的页面路径地址下标为0，也就是第一个路径在普通编译模式下会作为启动页面，但不建议使用更换顺序的方式修改启动页， 可以通过新增或修改编译模式更改启动页</p>
+<p><strong>window配置示例</strong></p>
+<pre><code>// app.json
+{
+  &quot;window&quot;:{
+    &quot;navigationBarBackgroundColor&quot;: &quot;#fff&quot;, // 导航栏背景颜色 
+    &quot;navigationBarTextStyle&quot;: &quot;black&quot;,      // 导航栏标题颜色，仅支持 black / white
+    &quot;navigationBarTitleText&quot;: &quot;weChart&quot;,    // 导航栏标题文字内容
+    &quot;backgroundColor&quot;: &quot;#fff&quot;,                // 窗口的背景色
+    &quot;backgroundTextStyle&quot;: &quot;light&quot;，            // 下拉 loading 的样式，仅支持 dark / light
+    &quot;enablePullDownRefresh&quot;: true            // 设置允许下拉刷新
+  }
+}
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注意： window的配置</span><br><span class="line">1. navigationBarTextStyle导航栏标题颜色，仅支持 black / white </span><br><span class="line">2. backgroundTextStyle下拉 loading 的样式，仅支持 dark / light</span><br></pre></td></tr></table></figure>
+<p><strong>tabBar配置示例</strong></p>
+<pre><code>// app.json
+{
+  &quot;tabBar&quot;: {
+      &quot;color&quot;: &quot;#000&quot;,                    // tab 上的文字默认颜色
+      &quot;selectedColor&quot;: &quot;#000&quot;,            // tab 上的文字选中时的颜色
+      &quot;backgroundColor&quot;: &quot;#f5f5f5&quot;,        // tab 的背景色
+    &quot;list&quot;: [{
+      &quot;pagePath&quot;: &quot;pages/index/index&quot;,    // 页面路径，必须在 pages 中先定义（必填）
+      &quot;text&quot;: &quot;首页&quot;,                    // tab 上按钮文字（必填）
+      &quot;iconPath&quot;: &quot;&quot;,                    // tab 上的图片路径,不支持网络图片
+      &quot;selectedIconPath&quot;: &quot;&quot;            // 选中时的图片路径
+    }, {
+      &quot;pagePath&quot;: &quot;pages/logs/logs&quot;,
+      &quot;text&quot;: &quot;日志&quot;,
+      &quot;iconPath&quot;: &quot;&quot;,                    
+      &quot;selectedIconPath&quot;: &quot;&quot;        
+    }]
+  }
+}
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：配置了tabBar后，底部栏只对配置的页面可见, 而且tabBar的设置至少两个，最多5个</span><br></pre></td></tr></table></figure>
+<h3 id="3-页面配置"><a href="#3-页面配置" class="headerlink" title="3.页面配置"></a>3.页面配置</h3><p>每一个小程序页面也可以使用.json文件来对本页面的窗口表现进行配置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：页面的配置只能设置 app.json 中部分 window 配置项的内容，页面中配置项会覆盖 app.json 的 window 中相同的配置项。</span><br></pre></td></tr></table></figure></p>
+<h2 id="7-小程序的组件"><a href="#7-小程序的组件" class="headerlink" title="7.小程序的组件"></a>7.小程序的组件</h2><h3 id="新建页面"><a href="#新建页面" class="headerlink" title="新建页面"></a>新建页面</h3><p>通过app.json来新建</p>
+<h3 id="wxml和html的不同点"><a href="#wxml和html的不同点" class="headerlink" title="wxml和html的不同点"></a>wxml和html的不同点</h3><p>标签名字不一样，如html里常用的标签 div、section, article, a、span等，在小程序里标签是view、navigator、text等</p>
+<h3 id="view容器组件"><a href="#view容器组件" class="headerlink" title="view容器组件"></a>view容器组件</h3><p>view组价的基本使用<br>    <view class="container"><br>        <!-- 页面内容 --><br>    </view></p>
+<h3 id="text文本组件"><a href="#text文本组件" class="headerlink" title="text文本组件"></a>text文本组件</h3><p>text的基本使用<br>    <view class="container"><br>        <!-- text组件 --><br>        <text>文本内容</text><br>    </view></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. text组件内只支持 text 嵌套</span><br><span class="line">2. 除了文本节点以外的其他节点都无法长按选中</span><br></pre></td></tr></table></figure>
+<h3 id="navigator页面链接组件"><a href="#navigator页面链接组件" class="headerlink" title="navigator页面链接组件"></a>navigator页面链接组件</h3><p>navigator的基本使用<br>    // url的连接前面必须加上斜杆 “/”<br>    <navigator url="/pages/demo/domo"><br>        跳转到demo<br>    </navigator></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：navigator不支持跳转到外部的url，例如url=&quot;https://www.baidu.com&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>跳转到tabBar的页面</strong><br>设置open-type值为switchTab，比如index页面是tabBar的页面，可以这样来设置</p>
+<p>跳转到tabBar的使用方法</p>
+<pre><code>&lt;navigator url=&quot;/pages/index/index&quot; open-type=&quot;switchTab&quot;&gt;
+    跳转到首页
+&lt;/navigator&gt;
+</code></pre><h3 id="image图片组件"><a href="#image图片组件" class="headerlink" title="image图片组件"></a>image图片组件</h3><p>image的基本使用</p>
+<pre><code>&lt;image 
+    style=&quot;width: 200px; height: 200px;
+    mode=&quot;aspectFill&quot; 
+    src=&quot;图片地址&quot;&gt;
+&lt;/image&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：image组件默认宽度300px、高度240px 注2：image组件中二维码/小程序码图片不支持长按识别</span><br></pre></td></tr></table></figure>
+<p>图片的裁剪模式</p>
+<p><strong>常用的mode 有效值</strong></p>
+<ul>
+<li>scaleToFill    不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素<br>   aspectFit        保持纵横比缩放图片，使图片的长边能完全显示出来<br>   aspectFill    保持纵横比缩放图片，只保证图片的短边能完全显示出来</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：微信朋友圈和QQ的说说页的图片裁剪方式，可以通过设置 `mode=aspectFill` 实现类似功能</span><br></pre></td></tr></table></figure>
+<h3 id="input组件"><a href="#input组件" class="headerlink" title="input组件"></a>input组件</h3><p>input的简单使用<br>    <input placeholder="请输入文字" type="text"></p>
+<p><strong>input常用的属性</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td>String</td>
+<td></td>
+<td>输入框的初始内容</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>“text”</td>
+<td>input 的类型</td>
+</tr>
+<tr>
+<td>password</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否是密码类型</td>
+</tr>
+<tr>
+<td>placeholder</td>
+<td>String</td>
+<td></td>
+<td>输入框为空时占位符</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否禁用</td>
+</tr>
+</tbody>
+</table>
+<p><strong>input type 有效值</strong><br>| 值 | 说明 |<br>| —- | —- |<br>| text | 文本输入键盘 |<br>| number | 数字输入键盘 |<br>| idcard | 身份证输入键盘 |<br>| digit | 带小数点的数字键盘 |</p>
+<h3 id="button-按钮组件"><a href="#button-按钮组件" class="headerlink" title="button 按钮组件"></a>button 按钮组件</h3><p><strong>button常用的属性</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>String</td>
+<td>default</td>
+<td>按钮的大小</td>
+</tr>
+<tr>
+<td>type</td>
+<td>String</td>
+<td>default</td>
+<td>按钮的样式类型</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否禁用</td>
+</tr>
+<tr>
+<td>loading</td>
+<td>Boolean</td>
+<td>false</td>
+<td>名称前是否带 loading 图标</td>
+</tr>
+<tr>
+<td>form-type</td>
+<td>String</td>
+<td></td>
+<td>用于form组件，可选值 submit/reset，触发form的提交和reset事件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="form表单组件"><a href="#form表单组件" class="headerlink" title="form表单组件"></a>form表单组件</h3><p>form表单基本提交案例</p>
+<p>第一步，设置button form-type=’submit </p>
+<p>第二步，通过bindsubmit设置form的提交事件处理函数 </p>
+<pre><code>// wxml
+&lt;form bindsubmit=&quot;formSubmit&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;username&quot; placeholder&gt;&lt;/input&gt;
+    &lt;button form-type=&quot;submit&quot;&gt;提交&lt;/button&gt;
+&lt;/form&gt;
+
+// js
+formSubmit: function(e){
+    console.log(e.detail.value)
+}
+</code></pre><h2 id="8-小程序样式"><a href="#8-小程序样式" class="headerlink" title="8.小程序样式"></a>8.小程序样式</h2><p>WXSS 对 CSS 进行了扩充以及修改，与 CSS 相比，WXSS 扩展的特性有：</p>
+<ul>
+<li>全局样式和局部样式</li>
+<li>尺寸单位</li>
+<li>样式导入</li>
+</ul>
+<h3 id="1-全局样式和局部样式"><a href="#1-全局样式和局部样式" class="headerlink" title="1.全局样式和局部样式"></a>1.全局样式和局部样式</h3><p>app.wxss是全局样式,page中的wxss是页面的局部样式</p>
+<h3 id="2-rpx-尺寸单位"><a href="#2-rpx-尺寸单位" class="headerlink" title="2.rpx 尺寸单位"></a>2.rpx 尺寸单位</h3><p><strong>什么是rpx？</strong><br>rpx可以使元素根据屏幕宽度进行自适应，小程序规定屏幕的宽度为750rpx， 也就是 100% = 750rpx; 50% = (750 / 2)rpx</p>
+<p><strong>其他自适应方法</strong><br>web中使用rem，vw, vh, 百分比</p>
+<p><strong>使用方法</strong><br>在开发小程序是建议使用750像素宽度的设计稿，这样设计稿的元素宽度是多少像素就直接设置为多少rpx</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意1rpx在某些屏幕上可能无效</span><br></pre></td></tr></table></figure>
+<h3 id="3-样式导入"><a href="#3-样式导入" class="headerlink" title="3.样式导入"></a>3.样式导入</h3><p>通过<code>@import</code>导入外部的样式，常用语公共样式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">总结：</span><br><span class="line">1.wxss 不需要导入到wxml，在页面目录下创建即可生效</span><br><span class="line">2.app.wxss是全局样式,page中的wxss是页面的局部样式</span><br><span class="line">3.rpx 尺寸单位 </span><br><span class="line">4.@import 样式导入</span><br></pre></td></tr></table></figure>
+<h2 id="9-小程序生命周期"><a href="#9-小程序生命周期" class="headerlink" title="9.小程序生命周期"></a>9.小程序生命周期</h2><p>生命周期有程序的生命周期和页面的生命周期</p>
+<h3 id="1-程序的生命周期"><a href="#1-程序的生命周期" class="headerlink" title="1.程序的生命周期"></a>1.程序的生命周期</h3><p>文档地址：<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/app.html" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/app.html</a></p>
+<p>在程序入口<code>app.js</code>中调用App(),    而且必须调用且只能调用一次，然后再App()的参数中可以声明生命周期函数</p>
+<p><strong>前台，后台的概念</strong></p>
+<ul>
+<li>前台：打开微信就进入小程序前台</li>
+<li>后台：当用户点击右上角关闭，或者按了设备 Home 键离开微信，此时小程序并没有直接销毁，而是进入了后台；</li>
+</ul>
+<p><strong>常用的生命周期：</strong><br>| 属性 | 描述 | 触发时机 |<br>| —- | —- | ——– |<br>| onLaunch | 监听小程序初始化 | 小程序初始化完成时（全局只触发一次）|<br>| onShow | 监听小程序显示 | 小程序启动，或从后台进入前台显示时 |<br>| onHide | 监听小程序隐藏 | 小程序从前台进入后台时 |</p>
+<p><strong>注意：小程序的运行机制</strong></p>
+<ul>
+<li>小程序没有重启的概念</li>
+<li>当小程序进入后台，客户端会维持一段时间的运行状态，超过一定时间后（目前是5分钟）会被微信主动销毁</li>
+</ul>
+<h3 id="2-页面的生命周期"><a href="#2-页面的生命周期" class="headerlink" title="2.页面的生命周期"></a>2.页面的生命周期</h3><p>页面需要通过Page(Object) 函数用来注册一个页面。接受一个 Object 类型参数，其指定页面的初始数据、生命周期回调、事件处理函数等。</p>
+<p>文档地址：<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html</a></p>
+<p><strong>常用的生命周期：</strong><br>| 属性 | 描述 |<br>| onLoad | 监听页面加载 |<br>| onShow | 监听页面显示 |<br>| onReady | 监听页面初次渲染完成 |<br>| onHide | 监听页面隐藏 |</p>
+<p><strong>onLoad</strong><br>页面加载时触发。一个页面只会调用一次，可以在 onLoad 的参数中获取打开当前页面路径中的参数。</p>
+<p>参数说明, 通过query获取当前页面路径中的参数</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>query</td>
+<td>Object</td>
+<td>打开当前页面路径中的参数</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">注意：页面需要访问api接口来初始化页面， 都可以在onLoad中调用</span><br></pre></td></tr></table></figure>
+<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><ul>
+<li>程序的生命周期: app.js中onLaunch在小程序初始化中触发</li>
+<li>页面的生命周期: onLoad 只在页面加载的时候执行一次, onShow每次访问页面都会执行, 通常onLoad在onShow之前执行</li>
+</ul>
+<h2 id="今天总结："><a href="#今天总结：" class="headerlink" title="今天总结："></a>今天总结：</h2><p>1.小程序和web网页的区别<br>2.小程序环境搭建<br>3.创建小程序<br>4.开发工具功能介绍<br>5.小程序的文件结构<br>6.小程序的组件<br>7.小程序样式<br>8.小程序生命周期</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/blog/tags/wx-小程序/" <i="" class="fa fa-tag"> wx-小程序</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/2019/01/16/小程序-购物车、选中状态、商品数量/" rel="next" title="小程序-promise封装">
+                <i class="fa fa-chevron-left"></i> 小程序-promise封装
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/blog/2019/01/16/Vue-cli构建步骤/" rel="prev" title="vue-cli构建步骤">
+                vue-cli构建步骤 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/blog/uploads/avatar.jpg" alt="YuGeYe">
+            
+              <p class="site-author-name" itemprop="name">YuGeYe</p>
+              <p class="site-description motion-element" itemprop="description">兄dei.你来了!</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/blog/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/blog/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/blog/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://juejin.im/timeline" target="_blank" title="掘金">
+                      
+                        <i class="fa fa-fw fa-globe"></i>掘金</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://gitee.com/" target="_blank" title="码云">
+                      
+                        <i class="fa fa-fw fa-globe"></i>码云</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://blog.csdn.net/nav/watchers" target="_blank" title="CSDN">
+                      
+                        <i class="fa fa-fw fa-globe"></i>CSDN</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://uksir.gitee.io/docs/" title="wanshao" target="_blank">wanshao</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://wangdoc.com/javascript/" title="阮一峰" target="_blank">阮一峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.liaoxuefeng.com/" title="廖雪峰" target="_blank">廖雪峰</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.zhangxinxu.com/" title="张鑫旭" target="_blank">张鑫旭</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#微信小程序开发-基础"><span class="nav-number">1.</span> <span class="nav-text">微信小程序开发-基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#今天知识点"><span class="nav-number">1.1.</span> <span class="nav-text">今天知识点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-什么是小程序"><span class="nav-number">1.2.</span> <span class="nav-text">1.什么是小程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-小程序和web网页的区别"><span class="nav-number">1.3.</span> <span class="nav-text">2.小程序和web网页的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-小程序环境搭建"><span class="nav-number">1.4.</span> <span class="nav-text">3.小程序环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#账号注册"><span class="nav-number">1.4.1.</span> <span class="nav-text">账号注册</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-创建小程序"><span class="nav-number">1.5.</span> <span class="nav-text">4.创建小程序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-开发工具功能介绍"><span class="nav-number">1.6.</span> <span class="nav-text">5.开发工具功能介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-小程序文件结构"><span class="nav-number">1.7.</span> <span class="nav-text">6.小程序文件结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-基本的结构"><span class="nav-number">1.7.1.</span> <span class="nav-text">1.基本的结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-全局配置-app-json"><span class="nav-number">1.7.2.</span> <span class="nav-text">2.全局配置 app.json</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-页面配置"><span class="nav-number">1.7.3.</span> <span class="nav-text">3.页面配置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-小程序的组件"><span class="nav-number">1.8.</span> <span class="nav-text">7.小程序的组件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#新建页面"><span class="nav-number">1.8.1.</span> <span class="nav-text">新建页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wxml和html的不同点"><span class="nav-number">1.8.2.</span> <span class="nav-text">wxml和html的不同点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#view容器组件"><span class="nav-number">1.8.3.</span> <span class="nav-text">view容器组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#text文本组件"><span class="nav-number">1.8.4.</span> <span class="nav-text">text文本组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#navigator页面链接组件"><span class="nav-number">1.8.5.</span> <span class="nav-text">navigator页面链接组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#image图片组件"><span class="nav-number">1.8.6.</span> <span class="nav-text">image图片组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#input组件"><span class="nav-number">1.8.7.</span> <span class="nav-text">input组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#button-按钮组件"><span class="nav-number">1.8.8.</span> <span class="nav-text">button 按钮组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#form表单组件"><span class="nav-number">1.8.9.</span> <span class="nav-text">form表单组件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-小程序样式"><span class="nav-number">1.9.</span> <span class="nav-text">8.小程序样式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-全局样式和局部样式"><span class="nav-number">1.9.1.</span> <span class="nav-text">1.全局样式和局部样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-rpx-尺寸单位"><span class="nav-number">1.9.2.</span> <span class="nav-text">2.rpx 尺寸单位</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-样式导入"><span class="nav-number">1.9.3.</span> <span class="nav-text">3.样式导入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-小程序生命周期"><span class="nav-number">1.10.</span> <span class="nav-text">9.小程序生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-程序的生命周期"><span class="nav-number">1.10.1.</span> <span class="nav-text">1.程序的生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-页面的生命周期"><span class="nav-number">1.10.2.</span> <span class="nav-text">2.页面的生命周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结："><span class="nav-number">1.11.</span> <span class="nav-text">总结：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#今天总结："><span class="nav-number">1.12.</span> <span class="nav-text">今天总结：</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">YuGeYe</span>
+
+  
+</div>
+
+
+  <!--<div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/blog/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/blog/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/blog/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/blog/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/blog/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
